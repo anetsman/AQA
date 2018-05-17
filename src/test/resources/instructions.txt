@@ -1,0 +1,12 @@
+1.	Data provider
+    a.	Optionally: build TestDataProvider project (if latest executable not present under \Citi.TD.CurveBuilder\TestDataProvider\bin\Debug folder)
+    b.	Optionally: modify user permissions. Edit \Citi.TD.CurveBuilder\TestDataProvider\bin\Debug\TestDataProvider.exe.config file, find key=”permissions”.
+        At this moment, only “full-access” key is supported. It gives user edit-all permissions.
+    c.	Run executable TestDataProvider.exe – wait for data provider to initialize and that’s it
+2.	UI
+    a.	start Google Chrome with parameters: --args -allow-file-access-from-files (it disables local files access security checks)
+        e.g.: C:\ ... \Application\chrome.exe --args --allow-file-access-from-files
+    b.	open plugin.html file with opened Chrome instance
+
+As confirmed with Alex, it’s possible to pass arguments from Selenium driver. However, if Firefox is preferred, there’s similar option,
+but Alex would need to google it himself (e.g.: “allow-file-access-from-files firefox” phrase).
